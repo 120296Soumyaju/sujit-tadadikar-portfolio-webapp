@@ -1,7 +1,7 @@
-
 import { FileText, Award, Book } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const About = () => {
   return (
@@ -17,9 +17,10 @@ const About = () => {
               </p>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <div className="w-64 h-64 rounded-full bg-primary/10 flex items-center justify-center">
-                <div className="text-6xl font-bold text-primary">ST</div>
-              </div>
+              <Avatar className="w-64 h-64">
+                <AvatarImage src="/lovable-uploads/ecf2cbe8-03ba-49b4-a0a9-e831c68ff84f.png" alt="Sujit Tadadikar" className="object-cover" />
+                <AvatarFallback className="text-6xl font-bold text-primary">ST</AvatarFallback>
+              </Avatar>
             </div>
           </div>
         </div>
@@ -247,7 +248,7 @@ const About = () => {
       </section>
 
       {/* Resume CTA */}
-      <section className="py-12 bg-primary text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold">Want to know more?</h2>
           <p className="mt-4 max-w-2xl mx-auto">

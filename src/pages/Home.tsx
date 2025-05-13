@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Briefcase, Award, Github, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Home = () => {
   return (
@@ -33,9 +34,10 @@ const Home = () => {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary/10 flex items-center justify-center">
-                  <div className="text-6xl font-bold text-primary">ST</div>
-                </div>
+                <Avatar className="w-64 h-64 md:w-80 md:h-80">
+                  <AvatarImage src="/lovable-uploads/ecf2cbe8-03ba-49b4-a0a9-e831c68ff84f.png" alt="Sujit Tadadikar" className="object-cover" />
+                  <AvatarFallback className="text-6xl font-bold text-primary">ST</AvatarFallback>
+                </Avatar>
                 <div className="absolute -bottom-6 -right-6 bg-white p-3 rounded-lg shadow-lg">
                   <Code className="text-primary h-8 w-8" />
                 </div>
