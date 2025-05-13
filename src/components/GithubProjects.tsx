@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github, Star, GitFork, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Repository {
   id: number;
@@ -46,11 +47,7 @@ const GithubProjects = () => {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="flex justify-center items-center py-12">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>
-    );
+    return <RepositorySkeleton />;
   }
 
   if (error) {
@@ -119,6 +116,44 @@ const GithubProjects = () => {
                   </a>
                 </Button>
               )}
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+};
+
+// Repository Skeleton Component
+const RepositorySkeleton = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[1, 2, 3, 4, 5, 6].map((item) => (
+        <Card key={item} className="h-full flex flex-col">
+          <CardContent className="pt-6 pb-4 flex flex-col flex-grow">
+            <div className="flex justify-between items-start mb-3">
+              <Skeleton className="h-7 w-40" />
+              <div className="flex space-x-2">
+                <Skeleton className="h-5 w-10" />
+                <Skeleton className="h-5 w-10" />
+              </div>
+            </div>
+            
+            <Skeleton className="h-4 w-full mb-2" />
+            <Skeleton className="h-4 w-5/6 mb-2" />
+            <Skeleton className="h-4 w-4/6 mb-4" />
+            
+            <Skeleton className="h-6 w-16 mb-3" />
+            
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Skeleton className="h-6 w-16" />
+              <Skeleton className="h-6 w-20" />
+              <Skeleton className="h-6 w-12" />
+            </div>
+            
+            <div className="flex space-x-3 mt-auto pt-4">
+              <Skeleton className="h-9 w-24" />
+              <Skeleton className="h-9 w-24" />
             </div>
           </CardContent>
         </Card>
