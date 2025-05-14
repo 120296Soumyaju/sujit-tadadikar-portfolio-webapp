@@ -41,49 +41,52 @@ const queryClient = new QueryClient({
   },
 });
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={
+// Wrap TooltipProvider as a proper React component function
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={
+                <Suspense fallback={<PageLoading />}>
+                  <Home />
+                </Suspense>
+              } />
+              <Route path="about" element={
+                <Suspense fallback={<PageLoading />}>
+                  <About />
+                </Suspense>
+              } />
+              <Route path="experience" element={
+                <Suspense fallback={<PageLoading />}>
+                  <Experience />
+                </Suspense>
+              } />
+              <Route path="projects" element={
+                <Suspense fallback={<PageLoading />}>
+                  <Projects />
+                </Suspense>
+              } />
+              <Route path="contact" element={
+                <Suspense fallback={<PageLoading />}>
+                  <Contact />
+                </Suspense>
+              } />
+            </Route>
+            <Route path="*" element={
               <Suspense fallback={<PageLoading />}>
-                <Home />
+                <NotFound />
               </Suspense>
             } />
-            <Route path="about" element={
-              <Suspense fallback={<PageLoading />}>
-                <About />
-              </Suspense>
-            } />
-            <Route path="experience" element={
-              <Suspense fallback={<PageLoading />}>
-                <Experience />
-              </Suspense>
-            } />
-            <Route path="projects" element={
-              <Suspense fallback={<PageLoading />}>
-                <Projects />
-              </Suspense>
-            } />
-            <Route path="contact" element={
-              <Suspense fallback={<PageLoading />}>
-                <Contact />
-              </Suspense>
-            } />
-          </Route>
-          <Route path="*" element={
-            <Suspense fallback={<PageLoading />}>
-              <NotFound />
-            </Suspense>
-          } />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
 
 export default App;
