@@ -31,16 +31,13 @@ const FeaturedProject = ({
   return (
     <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
       {imageSrc ? (
-        <div className="h-48 overflow-hidden">
-          <AspectRatio ratio={16 / 7}>
+        <div className="h-56 overflow-hidden">
+          <AspectRatio ratio={16 / 9}>
             <img 
               src={imageSrc} 
               alt={title} 
               className="w-full h-full object-cover"
             />
-            <div className={`absolute inset-0 bg-gradient-to-r from-${gradientColors.from}/70 to-${gradientColors.to}/70 flex items-center justify-center`}>
-              <h3 className="text-2xl font-bold text-white drop-shadow-md px-4 text-center">{title}</h3>
-            </div>
           </AspectRatio>
         </div>
       ) : (
@@ -56,7 +53,7 @@ const FeaturedProject = ({
             <Badge key={index} variant="outline">{badge}</Badge>
           ))}
         </div>
-        <h4 className="text-xl font-bold mb-3">{subtitle}</h4>
+        <h4 className="text-xl font-bold mb-3">{title}</h4>
         <p className="text-gray-600 mb-4">
           {description}
         </p>
