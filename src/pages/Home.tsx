@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Briefcase, Award, Github, FileText } from "lucide-react";
+import { ArrowRight, Code, CloudCog, Cpu, Github, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -73,7 +73,7 @@ const Home = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="mb-4 p-2 bg-primary/10 w-fit rounded-lg">
-                  <Award className="h-6 w-6 text-primary" />
+                  <Cpu className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">IoT Solutions</h3>
                 <p className="text-gray-600">
@@ -85,7 +85,7 @@ const Home = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="mb-4 p-2 bg-primary/10 w-fit rounded-lg">
-                  <Briefcase className="h-6 w-6 text-primary" />
+                  <CloudCog className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Cloud Engineering</h3>
                 <p className="text-gray-600">
