@@ -21,7 +21,7 @@ const FeaturedProjects = () => {
         from: "blue-500",
         to: "purple-600"
       },
-      imageSrc: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80"
+      imageSrc: "/lovable-uploads/gateway.png"
     },
     {
       title: "Enterprise SaaS ERP",
