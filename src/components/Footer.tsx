@@ -60,6 +60,16 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Sujit Tadadikar. All rights reserved.</p>
+          <p className="mt-2">
+            <a
+              href="https://madewithloveinindia.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-500 hover:underline"
+            >
+              Made with <span role="img" aria-label="Love" className="text-rose-500">&hearts;</span> in India
+            </a>
+          </p>
         </div>
       </div>
     </footer>
