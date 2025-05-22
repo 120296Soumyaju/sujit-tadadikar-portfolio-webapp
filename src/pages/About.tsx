@@ -254,9 +254,11 @@ const About = () => {
           <p className="mt-4 max-w-2xl mx-auto">
             Download my resume for a complete overview of my experience, skills, and qualifications.
           </p>
+          <a href="https://drive.google.com/file/d/11AXQnpYBT-zmMv3tzSxSSpk6-2-smKKb/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
           <Button variant="outline" className="mt-6 text-white border-white hover:bg-white hover:text-primary">
             <FileText className="mr-2 h-4 w-4" /> Download Resume
           </Button>
+          </a>
         </div>
       </section>
     </div>
