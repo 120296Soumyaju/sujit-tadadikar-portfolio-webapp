@@ -40,7 +40,7 @@ const FeaturedProjects = () => {
         from: "emerald-500",
         to: "teal-600"
       },
-      imageSrc: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80"
+      imageSrc: "/lovable-uploads/2752daad-299c-4219-84ee-05f77537b078.png"
     },
     {
       title: "High-Performance Financial APIs",
@@ -59,7 +59,7 @@ const FeaturedProjects = () => {
         from: "amber-500",
         to: "orange-600"
       },
-      imageSrc: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+      imageSrc: "/lovable-uploads/cae2814e-c6bb-4298-97a4-cfaff2e812b3.png"
     },
     {
       title: "IoT Communication Protocols",
@@ -78,7 +78,7 @@ const FeaturedProjects = () => {
         from: "purple-500",
         to: "indigo-600"
       },
-      imageSrc: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
+      imageSrc: "/lovable-uploads/691ee9f6-9106-426a-9cda-502d22f1498e.png"
     }
   ];
 

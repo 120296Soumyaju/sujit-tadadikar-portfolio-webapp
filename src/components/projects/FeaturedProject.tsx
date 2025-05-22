@@ -29,7 +29,7 @@ const FeaturedProject = ({
   imageSrc,
 }: FeaturedProjectProps) => {
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
       {imageSrc ? (
         <div className="h-48 overflow-hidden">
           <AspectRatio ratio={16 / 7}>
@@ -38,8 +38,8 @@ const FeaturedProject = ({
               alt={title} 
               className="w-full h-full object-cover"
             />
-            <div className={`absolute inset-0 bg-gradient-to-r from-${gradientColors.from}/80 to-${gradientColors.to}/80 flex items-center justify-center`}>
-              <h3 className="text-2xl font-bold text-white drop-shadow-md">{title}</h3>
+            <div className={`absolute inset-0 bg-gradient-to-r from-${gradientColors.from}/70 to-${gradientColors.to}/70 flex items-center justify-center`}>
+              <h3 className="text-2xl font-bold text-white drop-shadow-md px-4 text-center">{title}</h3>
             </div>
           </AspectRatio>
         </div>
