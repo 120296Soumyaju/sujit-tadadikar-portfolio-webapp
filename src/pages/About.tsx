@@ -1,4 +1,5 @@
-import { FileText, Award, Book } from "lucide-react";
+
+import { FileText, Award, Book, Code, CookingPot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -25,7 +26,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Bio Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
@@ -43,7 +44,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Education */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -81,7 +82,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Skills Section */}
       <section className="py-12">
         <div className="container mx-auto px-4">
@@ -158,7 +159,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Professional Development */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -217,28 +218,44 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">Swimming</h3>
+              <div className="flex items-center mb-3">
+                <img 
+                  src="/lovable-uploads/fa18e4ea-e552-4727-8474-a6e0109da2ac.png" 
+                  alt="Swimming" 
+                  className="h-6 w-6 text-primary mr-3" 
+                />
+                <h3 className="text-xl font-semibold">Swimming</h3>
+              </div>
               <p className="text-gray-600">
                 Just like in life, where adaptability is key, swimming teaches me resilience and the ability to navigate challenges with confidence, whether in water or real-world situations.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">Cooking</h3>
+              <div className="flex items-center mb-3">
+                <CookingPot className="h-6 w-6 text-primary mr-3" />
+                <h3 className="text-xl font-semibold">Cooking</h3>
+              </div>
               <p className="text-gray-600">
                 Cooking is not just about making food; it's about experimenting, being creative, and understanding the right mix of ingredients—skills that translate well into problem-solving and innovation in daily life.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">Coding</h3>
+              <div className="flex items-center mb-3">
+                <Code className="h-6 w-6 text-primary mr-3" />
+                <h3 className="text-xl font-semibold">Coding</h3>
+              </div>
               <p className="text-gray-600">
                 Much like solving real-world problems, coding allows me to break down complex challenges into logical steps, reinforcing patience, analytical thinking, and creativity.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">Learning New Skills</h3>
+              <div className="flex items-center mb-3">
+                <Book className="h-6 w-6 text-primary mr-3" />
+                <h3 className="text-xl font-semibold">Learning New Skills</h3>
+              </div>
               <p className="text-gray-600">
                 In a fast-evolving world, continuous learning keeps me adaptable and open to growth, helping me stay ahead and apply newfound knowledge to both professional and personal life.
               </p>

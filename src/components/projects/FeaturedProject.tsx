@@ -2,6 +2,7 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface FeaturedProjectProps {
   title: string;
@@ -14,6 +15,7 @@ interface FeaturedProjectProps {
     from: string;
     to: string;
   };
+  imageSrc?: string;
 }
 
 const FeaturedProject = ({
@@ -24,18 +26,34 @@ const FeaturedProject = ({
   tags,
   badges,
   gradientColors,
+  imageSrc,
 }: FeaturedProjectProps) => {
   return (
     <Card className="overflow-hidden">
-      <div 
-        className={`h-48 bg-gradient-to-r from-${gradientColors.from} to-${gradientColors.to} flex items-center justify-center`}
-      >
-        <h3 className="text-2xl font-bold text-white">{title}</h3>
-      </div>
+      {imageSrc ? (
+        <div className="h-48 overflow-hidden">
+          <AspectRatio ratio={16 / 7}>
+            <img 
+              src={imageSrc} 
+              alt={title} 
+              className="w-full h-full object-cover"
+            />
+            <div className={`absolute inset-0 bg-gradient-to-r from-${gradientColors.from}/80 to-${gradientColors.to}/80 flex items-center justify-center`}>
+              <h3 className="text-2xl font-bold text-white drop-shadow-md">{title}</h3>
+            </div>
+          </AspectRatio>
+        </div>
+      ) : (
+        <div 
+          className={`h-48 bg-gradient-to-r from-${gradientColors.from} to-${gradientColors.to} flex items-center justify-center`}
+        >
+          <h3 className="text-2xl font-bold text-white">{title}</h3>
+        </div>
+      )}
       <CardContent className="pt-6">
         <div className="flex flex-wrap gap-2 mb-4">
           {badges.map((badge, index) => (
-            <Badge key={index}>{badge}</Badge>
+            <Badge key={index} variant="outline">{badge}</Badge>
           ))}
         </div>
         <h4 className="text-xl font-bold mb-3">{subtitle}</h4>

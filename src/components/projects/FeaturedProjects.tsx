@@ -20,7 +20,8 @@ const FeaturedProjects = () => {
       gradientColors: {
         from: "blue-500",
         to: "purple-600"
-      }
+      },
+      imageSrc: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Enterprise SaaS ERP",
@@ -38,7 +39,8 @@ const FeaturedProjects = () => {
       gradientColors: {
         from: "emerald-500",
         to: "teal-600"
-      }
+      },
+      imageSrc: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "High-Performance Financial APIs",
@@ -56,7 +58,8 @@ const FeaturedProjects = () => {
       gradientColors: {
         from: "amber-500",
         to: "orange-600"
-      }
+      },
+      imageSrc: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "IoT Communication Protocols",
@@ -74,7 +77,8 @@ const FeaturedProjects = () => {
       gradientColors: {
         from: "purple-500",
         to: "indigo-600"
-      }
+      },
+      imageSrc: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
