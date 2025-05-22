@@ -1,4 +1,5 @@
-import { FileText, Award, Book, Code, CookingPot, Activity } from "lucide-react";
+
+import { FileText, Award, Book, Code, CookingPot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -218,7 +219,11 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-center mb-3">
-                <Activity className="h-6 w-6 text-primary mr-3" />
+                <img 
+                  src="/lovable-uploads/fa18e4ea-e552-4727-8474-a6e0109da2ac.png" 
+                  alt="Swimming" 
+                  className="h-6 w-6 text-primary mr-3" 
+                />
                 <h3 className="text-xl font-semibold">Swimming</h3>
               </div>
               <p className="text-gray-600">
