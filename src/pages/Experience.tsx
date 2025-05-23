@@ -325,12 +325,12 @@ const Experience = () => {
               </div>
 
               <div className="mt-4 text-gray-700">
-                <p className="mb-2 flex items-center space-x-2">
-                  <img src="company-logos/doi.png" alt="DOI" className="w-7 h-7 object-contain" />
+                <p className="mb-3 flex items-center space-x-3">
+                  <img src="company-logos/doi.png" alt="DOI" className="w-10 h-10 object-contain" />
                   <span className="text-lg font-semibold">10.48175/IJARSCT-15203</span>
                 </p>
 
-                <div className="flex space-x-8 items-start mt-2">
+                <div className="flex space-x-10 items-start mt-3">
                   {/* Read Publication */}
                   <a
                     href="https://lnkd.in/dCHJZCPg"
@@ -338,8 +338,12 @@ const Experience = () => {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center text-primary hover:opacity-80"
                   >
-                    <img src="company-logos/reading-book.png" alt="Read Publication" className="w-8 h-8 object-contain mb-1" />
-                    <span className="text-sm">Read Publication</span>
+                    <img
+                      src="company-logos/reading-book.png"
+                      alt="Read Publication"
+                      className="w-12 h-12 object-contain mb-2"
+                    />
+                    <span className="text-base font-medium">Read Publication</span>
                   </a>
 
                   {/* CrossRef */}
@@ -349,11 +353,16 @@ const Experience = () => {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center text-primary hover:opacity-80"
                   >
-                    <img src="company-logos/crossref-logo-landscape-200.png" alt="CrossRef" className="w-8 h-8 object-contain mb-1" />
-                    <span className="text-sm">CrossRef</span>
+                    <img
+                      src="company-logos/crossref-logo-landscape-200.png"
+                      alt="CrossRef"
+                      className="w-16 h-auto object-contain mb-2"
+                    />
+                    <span className="text-base font-medium">CrossRef</span>
                   </a>
                 </div>
               </div>
+
             </CardContent>
           </Card>
         </div>
