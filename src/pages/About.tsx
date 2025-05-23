@@ -56,7 +56,12 @@ const About = () => {
                   <h3 className="text-xl font-semibold">Master of Computer Applications (MCA)</h3>
                   <span className="text-gray-500">2024</span>
                 </div>
-                <p className="text-gray-600">University of Mumbai</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/MU.png" alt="MU Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    University of Mumbai
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
@@ -66,7 +71,12 @@ const About = () => {
                   <h3 className="text-xl font-semibold">Bachelor of Science - Information Technology</h3>
                   <span className="text-gray-500">2020</span>
                 </div>
-                <p className="text-gray-600">University of Mumbai</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/MU.png" alt="MU Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    University of Mumbai
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
@@ -76,7 +86,12 @@ const About = () => {
                   <h3 className="text-xl font-semibold">Diploma in Computer Engineering</h3>
                   <span className="text-gray-500">2015</span>
                 </div>
-                <p className="text-gray-600">RVIOT, Navi Mumbai</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/SCOE.png" alt="SCOE Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    Saraswati Institute of Technology, Navi Mumbai
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>

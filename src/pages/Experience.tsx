@@ -25,7 +25,12 @@ const Experience = () => {
               <div className="mb-2">
                 <Badge className="mb-2">Nov 2023 - Present</Badge>
                 <h3 className="text-xl font-bold">Company Owner & Lead Computer Engineer</h3>
-                <p className="text-gray-600">Soumya's Computer Solution's, Navi Mumbai, Maharashtra, India</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/SCS.png" alt="SCS Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    Soumya's Computer Solution's, Navi Mumbai, Maharashtra, India
+                  </p>
+                </div>
               </div>
 
               <Card className="mt-4">
@@ -52,7 +57,12 @@ const Experience = () => {
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">Oct 2022 - Oct 2023</Badge>
                 <h3 className="text-xl font-bold">Embedded Software Engineer</h3>
-                <p className="text-gray-600">LEXI DEVICES INC., Mumbai, Maharashtra, India</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/lexidevices_logo.png" alt="Lexi Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    LEXI DEVICES INC., Lebanon, Ohio ,United States
+                  </p>
+                </div>
               </div>
 
               <Card className="mt-4">
@@ -104,7 +114,12 @@ const Experience = () => {
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">May 2022 - Sep 2022</Badge>
                 <h3 className="text-xl font-bold">Junior Executive - Import Service Delivery - Centralized Documentation</h3>
-                <p className="text-gray-600">CMA CGM INDIA PVT. LTD., Navi Mumbai, Maharashtra, India</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/cma_cgm_logo.png" alt="CMA CGM Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    CMA CGM INDIA PVT. LTD., Navi Mumbai, Maharashtra, India
+                  </p>
+                </div>
               </div>
 
               <Card className="mt-4">
@@ -134,7 +149,12 @@ const Experience = () => {
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">Mar 2021 - Mar 2022</Badge>
                 <h3 className="text-xl font-bold">Import/Export Documentation Assistant</h3>
-                <p className="text-gray-600">SEAHORSE SHIP AGENCIES PVT. LTD., Mumbai, Maharashtra, India</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/seahorseshipping_logo.png" alt="SSA Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    SEAHORSE SHIP AGENCIES PVT. LTD., Mumbai, Maharashtra, India
+                  </p>
+                </div>
               </div>
 
               <Card className="mt-4">
@@ -164,7 +184,12 @@ const Experience = () => {
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">Mar 2020 - Feb 2021</Badge>
                 <h3 className="text-xl font-bold">Software Developer (Full Stack Python)</h3>
-                <p className="text-gray-600">SPERENTES SOLUTIONS LLP, Navi Mumbai, Maharashtra</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/sperentes_logo.png" alt="Sperentes Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    SPERENTES SOLUTIONS LLP, Navi Mumbai, Maharashtra, India
+                  </p>
+                </div>
               </div>
 
               <Card className="mt-4">
@@ -213,7 +238,12 @@ const Experience = () => {
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">Feb 2019 - Feb 2020</Badge>
                 <h3 className="text-xl font-bold">Software Consultant | Full Stack Software Engineer</h3>
-                <p className="text-gray-600">Freelance</p>
+                <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/freelancer_com_logo.png" alt="Freelancer Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    Freelancer.com ,Sydney, NSW
+                  </p>
+                </div>
               </div>
 
               <Card className="mt-4">
@@ -249,11 +279,17 @@ const Experience = () => {
             <div className="mb-2">
               <Badge className="mb-2">Aug 2023</Badge>
               <h3 className="text-xl font-bold">Python Programmer</h3>
-              <p className="text-gray-600">Contetra Python Developer Internship: Winter 2023, Contetra Private Limited, Mumbai</p>
+              <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/contetra_logo.png" alt="Contetra Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600">
+                    Contetra Private Limited, Mumbai, India
+                  </p>
+              </div>
             </div>
 
             <Card className="mt-4">
               <CardContent className="pt-6">
+                <p className="mb-4">Contetra Python Developer Internship: Winter 2023</p>
                 <p className="mb-4">The internship program involved Data Scraping & Warehousing.</p>
 
                 <h4 className="font-semibold mb-2">Key Achievements and Responsibilities:</h4>
@@ -278,24 +314,31 @@ const Experience = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-xl font-bold">Early Cancer Detection using Prediction Algorithm: A Survey.</h3>
-                  <p className="text-gray-600 mt-1">International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)</p>
+                  <div className="flex items-center gap-3 mt-1">
+                  <img src="company-logos/IJARSCT Logo.png" alt="IJARSCT Logo" className="w-8 h-8 object-contain" />
+                  <p className="text-gray-600" mt-1>
+                    International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)
+                  </p>
+              </div>
                 </div>
                 <Badge>Jan 2024</Badge>
               </div>
 
               <div className="mt-4 text-gray-700">
-                <p className="mb-2">
-                  <strong>DOI:</strong> 10.48175/IJARSCT-15203
+                <p className="mb-2 flex items-center">
+                  <img src="company-logos/doi.png" alt="DOI" className="w-6 h-6 mr-2 object-contain" />
+                  <span><strong>10.48175/IJARSCT-15203</strong></span>
                 </p>
-                <div className="flex space-x-4">
-                  <a href="https://lnkd.in/dCHJZCPg" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    Read Publication
+                <div className="flex space-x-4 items-center">
+                  <a href="https://lnkd.in/dCHJZCPg" target="_blank" rel="noopener noreferrer">
+                    <img src="company-logos/reading-book.png" alt="Read Publication" className="w-8 h-8 object-contain hover:opacity-80" />
                   </a>
-                  <a href="https://lnkd.in/d7JKNsn2" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    CrossRef
+                  <a href="https://lnkd.in/d7JKNsn2" target="_blank" rel="noopener noreferrer">
+                    <img src="company-logos/crossref-logo-landscape-200.png" alt="CrossRef" className="w-8 h-8 object-contain hover:opacity-80" />
                   </a>
                 </div>
               </div>
+
             </CardContent>
           </Card>
         </div>
