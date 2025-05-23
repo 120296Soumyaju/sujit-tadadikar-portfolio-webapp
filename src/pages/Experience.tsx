@@ -280,25 +280,38 @@ const Experience = () => {
               <Badge className="mb-2">Aug 2023</Badge>
               <h3 className="text-xl font-bold">Python Programmer</h3>
               <div className="flex items-center gap-3 mt-1">
-                  <img src="company-logos/contetra_logo.png" alt="Contetra Logo" className="w-8 h-8 object-contain" />
-                  <p className="text-gray-600">
-                    Contetra Private Limited, Mumbai, India
-                  </p>
+                <img src="company-logos/contetra_logo.png" alt="Contetra Logo" className="w-8 h-8 object-contain" />
+                <p className="text-gray-600">Contetra Private Limited, Mumbai, India</p>
               </div>
             </div>
 
             <Card className="mt-4">
               <CardContent className="pt-6">
-                <p className="mb-4">Contetra Python Developer Internship: Winter 2023</p>
-                <p className="mb-4">The internship program involved Data Scraping & Warehousing.</p>
+                <p className="mb-4 text-gray-700">
+                  During my winter internship at Contetra, I worked as a Python Developer, contributing to data scraping and warehousing solutions that streamlined financial data workflows.
+                </p>
 
                 <h4 className="font-semibold mb-2">Key Achievements and Responsibilities:</h4>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
                   <li>Developed and maintained Python scripts to automate Web Scraping.</li>
-                  <li>Collaborated with the Finance to understand and address their programming needs.</li>
-                  <li>Assisted in troubleshooting and debugging Python code, contributing to the overall improvement of the codebase.</li>
-                  <li>Actively participated in team meetings, discussions, and brainstorming sessions, providing valuable insights and solutions.</li>
+                  <li>Collaborated with the Finance team to understand and address their programming needs.</li>
+                  <li>Debugged and optimized existing Python codebase for enhanced efficiency.</li>
+                  <li>Participated in brainstorming sessions and delivered practical solutions to data challenges.</li>
                 </ul>
+
+                {/* Tool Used */}
+                <div className="mt-6">
+                  <h4 className="text-lg font-semibold mb-2">Strike-That Official Tool</h4>
+                  <a
+                    href="https://contetra.com/strike-that/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm hover:bg-blue-700 transition"
+                  >
+                    Contetra Strike-That Official Website
+                  </a>
+                </div>
+
                 {/* Internship Certificate Image */}
                 <div className="mt-8">
                   <h4 className="text-lg font-semibold mb-3">Internship Certificate</h4>
@@ -314,6 +327,7 @@ const Experience = () => {
         </div>
       </section>
 
+
       <section className="py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-8">Research & Publications</h2>
@@ -324,44 +338,44 @@ const Experience = () => {
                 <div>
                   <h3 className="text-xl font-bold">Early Cancer Detection using Prediction Algorithm: A Survey.</h3>
                   <div className="flex items-center gap-3 mt-1">
-                  <img src="company-logos/IJARSCT Logo.png" alt="IJARSCT Logo" className="w-8 h-8 object-contain" />
-                  <p className="text-gray-600" mt-1>
-                    International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)
-                    <strong>ISSN (Online) 2581-9429</strong>
-                  </p>
-                  <div className="mt-4 text-gray-700 text-sm leading-relaxed space-y-2">
-                    <p>
-                      <strong>Authors:</strong> Mr. Sujit Prakash Tadadikar<sup>1</sup>, Mr. Pankaj Sakpal<sup>2</sup>, Mrs. Sujata Shahabade<sup>3</sup>
+                    <img src="company-logos/IJARSCT Logo.png" alt="IJARSCT Logo" className="w-8 h-8 object-contain" />
+                    <p className="text-gray-600" mt-1>
+                      International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)
+                      <strong>ISSN (Online) 2581-9429</strong>
                     </p>
+                    <div className="mt-4 text-gray-700 text-sm leading-relaxed space-y-2">
+                      <p>
+                        <strong>Authors:</strong> Mr. Sujit Prakash Tadadikar<sup>1</sup>, Mr. Pankaj Sakpal<sup>2</sup>, Mrs. Sujata Shahabade<sup>3</sup>
+                      </p>
 
-                    <p>
-                      <strong>Affiliations:</strong><br />
-                      Embedded Software Engineer, Department of Science and Technology, IDOL, Mumbai, India<sup>1</sup><br />
-                      Assistant Manager, Department of Science and Technology, IDOL, Mumbai, India<sup>2</sup><br />
-                      Assistant Professor, Department of Computer Science, PCACS, Navi Mumbai, India<sup>3</sup>
-                    </p>
+                      <p>
+                        <strong>Affiliations:</strong><br />
+                        Embedded Software Engineer, Department of Science and Technology, IDOL, Mumbai, India<sup>1</sup><br />
+                        Assistant Manager, Department of Science and Technology, IDOL, Mumbai, India<sup>2</sup><br />
+                        Assistant Professor, Department of Computer Science, PCACS, Navi Mumbai, India<sup>3</sup>
+                      </p>
 
-                    <p>
-                      <strong>Emails:</strong><br />
-                      logic.codedebugrepeat@gmail.com<sup>1</sup>, pankaj.sakpal1819@gmail.com<sup>2</sup>, sujathashahabade@gmail.com<sup>3</sup>
-                    </p>
+                      <p>
+                        <strong>Emails:</strong><br />
+                        logic.codedebugrepeat@gmail.com<sup>1</sup>, pankaj.sakpal1819@gmail.com<sup>2</sup>, sujathashahabade@gmail.com<sup>3</sup>
+                      </p>
 
-                    <p>
-                      <strong>Abstract:</strong> This survey paper provides an overview of the advancements in early cancer detection
-                      through the application of prediction algorithms. Early detection of cancer plays a crucial role in improving patient
-                      outcomes and reducing mortality rates. With the rise of computational technologies and machine learning techniques,
-                      predictive algorithms have emerged as powerful tools for identifying potential cancer cases at an early stage.
-                      This survey explores various prediction algorithms, their applications, challenges, and future directions in the
-                      realm of early cancer detection.
-                    </p>
+                      <p>
+                        <strong>Abstract:</strong> This survey paper provides an overview of the advancements in early cancer detection
+                        through the application of prediction algorithms. Early detection of cancer plays a crucial role in improving patient
+                        outcomes and reducing mortality rates. With the rise of computational technologies and machine learning techniques,
+                        predictive algorithms have emerged as powerful tools for identifying potential cancer cases at an early stage.
+                        This survey explores various prediction algorithms, their applications, challenges, and future directions in the
+                        realm of early cancer detection.
+                      </p>
 
-                    <p>
-                      <strong>Keywords:</strong> Cancer detection, DNA, Machine learning, Prediction Algorithm
-                    </p>
+                      <p>
+                        <strong>Keywords:</strong> Cancer detection, DNA, Machine learning, Prediction Algorithm
+                      </p>
+                    </div>
                   </div>
-              </div>
                 </div>
-                <Badge>Volume 4, Issue 2, January 2024</Badge>
+                <Badge>January 2024</Badge>
               </div>
 
               <div className="mt-4 text-gray-700">
