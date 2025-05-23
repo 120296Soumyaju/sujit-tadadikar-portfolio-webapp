@@ -326,7 +326,7 @@ const Experience = () => {
 
               <div className="mt-4 text-gray-700">
                 <p className="mb-3 flex items-center space-x-3">
-                  <img src="company-logos/doi.png" alt="DOI" className="w-10 h-10 object-contain" />
+                  <img src="company-logos/DOI_logo.png" alt="DOI" className="w-10 h-10 object-contain" />
                   <span className="text-lg font-semibold">10.48175/IJARSCT-15203</span>
                 </p>
 
