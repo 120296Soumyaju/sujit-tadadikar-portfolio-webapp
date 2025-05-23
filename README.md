@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This project showcases my skills, projects, and professional background. It's built with a modern tech stack including **React + TypeScript + Vite** on the frontend and **Node.js + Express** on the backend.
 
-Live site: 
+Live site: https://sujit-tadadikar.netlify.app/
 
 ---
 

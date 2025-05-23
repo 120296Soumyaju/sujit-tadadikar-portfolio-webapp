@@ -24,7 +24,7 @@ const Experience = () => {
               <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary"></div>
               <div className="mb-2">
                 <Badge className="mb-2">Nov 2023 - Present</Badge>
-                <h3 className="text-xl font-bold">Company Owner & Lead Computer Engineer</h3>
+                <h3 className="text-xl font-bold">Company Owner & Lead Software Engineer</h3>
                 <div className="flex items-center gap-3 mt-1">
                   <img src="company-logos/SCS.png" alt="SCS Logo" className="w-8 h-8 object-contain" />
                   <p className="text-gray-600">
@@ -38,17 +38,104 @@ const Experience = () => {
                   <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
                     <li>
-                      <strong>Founded and Managed Business:</strong> Established and grew Soumya's Computer Solutions, overseeing all facets of the company, including strategic planning, operations, and financial management.
+                      <strong>Business Strategy & Operations:</strong> Identified a market gap in IT solutions for small businesses and academic institutions. Secured AMC with M/s Lakashmipathi Engineering for regular IT support and system maintenance, improving uptime and efficiency.
                     </li>
                     <li>
-                      <strong>Led Technical Operations:</strong> Directed and performed complex technical tasks, including system installations, repairs, and troubleshooting, ensuring high-quality IT support and customer satisfaction.
+                      <strong>Full-Stack Development & Client Solutions:</strong> Founded Soumya's Computer Solutions to provide end-to-end software services. Delivered custom backend systems, dashboards, and applications across industries.
                     </li>
                     <li>
-                      <strong>Developed Client Relationships:</strong> Built and maintained strong client relationships through excellent service delivery, tailored solutions, and effective communication.
+                      <strong>Highlighted Projects:</strong>
+                      <ul className="list-disc pl-5 space-y-4 mt-2 text-gray-700">
+                        <li>
+                          <a
+                            href="https://github.com/120296Soumyaju/pocketsense"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            PocketSense API
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> UniLedger Technologies<br />
+                          Built a mobile-first web application for college students to track and split expenses, with daily summaries and budgeting tips.<br />
+                          <strong>Tech Stack:</strong> React.js, Django REST API, SQLite
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/120296Soumyaju/Quiz2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            Employee Data Analytics API
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> PeoplePulse HR Analytics<br />
+                          Developed a secure backend service for managing employee records, leave balances, and HR insights with BI integration.<br />
+                          <strong>Tech Stack:</strong> Django DRF, PostgreSQL, Swagger
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/120296Soumyaju/SILK"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            MyDoList
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> Nimbus Productivity Tools<br />
+                          Created a to-do list app with smart filtering and persistent login for power users and minimalists.<br />
+                          <strong>Tech Stack:</strong> Django DRF, Django ORM, SQLite, HTML5, Bootstrap
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/120296Soumyaju/job-portal-Webapp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            Job Portal WebApp
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> TalentBridge Systems<br />
+                          Full-stack platform enabling candidates and recruiters to manage applications, job posts, and communication.<br />
+                          <strong>Tech Stack:</strong> Next.js, Tailwind CSS, React Hooks, Django DRF, PostgreSQL, JWT Auth
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/120296Soumyaju/-Academic-Assignment-Management-Backend-Service"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            Academic Assignment Management
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> EduTrack Solutions<br />
+                          Flask backend with role-based access for teachers, students, and principals to handle academic workflows.<br />
+                          <strong>Tech Stack:</strong> Flask, SQLAlchemy ORM, Alembic
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/120296Soumyaju/Agrocraft"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            Agrocraft
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> GreenRoots Commerce Pvt. Ltd.<br />
+                          E-commerce platform for buying/selling farm produce, reducing middlemen and improving farm income.<br />
+                          <strong>Tech Stack:</strong> PHP, MySQL, Bootstrap
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+
             </div>
 
             {/* LEXI DEVICES Experience */}
@@ -251,16 +338,74 @@ const Experience = () => {
                   <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
                     <li>
-                      <strong>Software Development:</strong> Developed and delivered major software projects for graduation and post-graduation students, utilizing Java, C++, ASP.NET, PHP, and MySQL to create robust applications.
+                      <strong>Software Development:</strong> Developed and delivered custom software for academic and freelance clients using Java, C++, ASP.NET, PHP, MySQL, and Android.
                     </li>
                     <li>
-                      <strong>IoT Hardware Integration:</strong> Designed and implemented IoT-based hardware projects, integrating software solutions with physical devices to meet project requirements.
+                      <strong>IoT Hardware Integration:</strong> Built IoT-based hardware solutions by integrating microcontrollers and sensors with cloud-connected apps for academic research.
                     </li>
                     <li>
-                      <strong>Android App Development:</strong> Created and optimized Android applications, enhancing user experience and functionality for various client needs.
+                      <strong>Android App Development:</strong> Designed user-friendly Android applications with real-time data handling and optimized UI/UX.
                     </li>
                     <li>
-                      <strong>Technical Support and Guidance:</strong> Provided expert technical support and mentorship to students, ensuring successful project completion and addressing complex technical challenges.
+                      <strong>Technical Mentorship:</strong> Provided guidance and debugging support for students and freelancers, improving project quality and completion rates.
+                    </li>
+                    <li>
+                      <strong>Consulting Impact:</strong>
+                      <ul className="list-disc pl-5 space-y-2 mt-2">
+                        <li><strong>Situation:</strong> Academic and freelance clients lacked access to reliable custom software solutions and technical support.</li>
+                        <li><strong>Task:</strong> Deliver software, IoT integration, Android apps, and mentorship tailored to project needs.</li>
+                        <li><strong>Action:</strong>
+                          <ul className="list-disc pl-5">
+                            <li>Developed apps using Java, C++, ASP.NET, PHP, and Android Studio.</li>
+                            <li>Engineered IoT systems integrating microcontrollers and cloud data services.</li>
+                            <li>Created Android apps with real-time sync and database connectivity.</li>
+                            <li>Mentored students on debugging, optimization, and best practices.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Result:</strong> Successfully delivered multiple high-quality software projects that enhanced client satisfaction and academic performance.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Key Projects Delivered:</strong>
+                      <ul className="list-disc pl-5 space-y-4 mt-2 text-gray-700">
+                        <li>
+                          <span className="font-semibold">Pathology Lab Management System</span><br />
+                          <strong>Delivered to:</strong> Dr. Mehta Diagnostics<br />
+                          Desktop application for automating pathology test records and result generation.<br />
+                          <strong>Tech Stack:</strong> C#.NET, SQL Server, Crystal Report
+                        </li>
+                        <li>
+                          <span className="font-semibold">Hospital Management System</span><br />
+                          <strong>Delivered to:</strong> MedCare Labs<br />
+                          Web-based solution to manage hospital operations including billing and appointments.<br />
+                          <strong>Tech Stack:</strong> ASP.NET, SQL Server
+                        </li>
+                        <li>
+                          <a
+                            href="https://github.com/120296Soumyaju/online-shopping-site"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            MOTOROID – Automobile Accessories E-Commerce Portal
+                          </a><br />
+                          <strong>Delivered to:</strong> Mr. Prashant Gawari<br />
+                          E-commerce site for two-wheeler accessories with cart and order tracking.<br />
+                          <strong>Tech Stack:</strong> PHP, MySQL, Bootstrap
+                        </li>
+                        <li>
+                          <span className="font-semibold">Farmer-to-Consumer Crop Delivery Portal</span><br />
+                          <strong>Delivered to:</strong> AgroBridge Solutions<br />
+                          Platform enabling direct crop sales from farmers to consumers with delivery tracking.<br />
+                          <strong>Tech Stack:</strong> JSP, Servlets, MySQL
+                        </li>
+                        <li>
+                          <span className="font-semibold">Crime Information Management System</span><br />
+                          <strong>Delivered to:</strong> SafeCity Research Initiative<br />
+                          Secure platform to log and manage crime reports and case data.<br />
+                          <strong>Tech Stack:</strong> PHP, MySQL, HTML/CSS
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </CardContent>
