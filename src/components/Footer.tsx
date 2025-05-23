@@ -71,6 +71,19 @@ const Footer = () => {
             </a>
           </p>
         </div>
+        <div className="text-center mt-2">
+          <a
+            href="https://visitorbadge.io/status?path=https%3A%2F%2Fsujit-tadadikar.netlify.app%2F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <img
+              src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fsujit-tadadikar.netlify.app%2F&label=VISITORS%20TODAY&labelColor=%23d9e3f0&countColor=%23dce775&style=plastic&labelStyle=lower"
+              alt="Visitor badge"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );
