@@ -58,7 +58,7 @@ const Experience = () => {
                 <Badge variant="secondary" className="mb-2">Oct 2022 - Oct 2023</Badge>
                 <h3 className="text-xl font-bold">Embedded Software Engineer</h3>
                 <div className="flex items-center gap-3 mt-1">
-                  <img src="company-logos/lexidevices_logo.png" alt="Lexi Logo" className="w-8 h-8 object-contain" />
+                  <img src="company-logos/lexi_logo.png" alt="Lexi Logo" className="w-8 h-8 object-contain" />
                   <p className="text-gray-600">
                     LEXI DEVICES INC., Lebanon, Ohio ,United States
                   </p>
@@ -239,7 +239,7 @@ const Experience = () => {
                 <Badge variant="secondary" className="mb-2">Feb 2019 - Feb 2020</Badge>
                 <h3 className="text-xl font-bold">Software Consultant | Full Stack Software Engineer</h3>
                 <div className="flex items-center gap-3 mt-1">
-                  <img src="company-logos/freelancer_com_logo.png" alt="Freelancer Logo" className="w-8 h-8 object-contain" />
+                  <img src="company-logos/freelancer_logo.png" alt="Freelancer Logo" className="w-8 h-8 object-contain" />
                   <p className="text-gray-600">
                     Freelancer.com ,Sydney, NSW
                   </p>
