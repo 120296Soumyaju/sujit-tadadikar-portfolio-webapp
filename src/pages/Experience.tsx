@@ -325,20 +325,35 @@ const Experience = () => {
               </div>
 
               <div className="mt-4 text-gray-700">
-                <p className="mb-2 flex items-center">
-                  <img src="company-logos/doi.png" alt="DOI" className="w-6 h-6 mr-2 object-contain" />
-                  <span><strong>10.48175/IJARSCT-15203</strong></span>
+                <p className="mb-2 flex items-center space-x-2">
+                  <img src="company-logos/doi.png" alt="DOI" className="w-7 h-7 object-contain" />
+                  <span className="text-lg font-semibold">10.48175/IJARSCT-15203</span>
                 </p>
-                <div className="flex space-x-4 items-center">
-                  <a href="https://lnkd.in/dCHJZCPg" target="_blank" rel="noopener noreferrer">
-                    <img src="company-logos/reading-book.png" alt="Read Publication" className="w-8 h-8 object-contain hover:opacity-80" />
+
+                <div className="flex space-x-8 items-start mt-2">
+                  {/* Read Publication */}
+                  <a
+                    href="https://lnkd.in/dCHJZCPg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center text-primary hover:opacity-80"
+                  >
+                    <img src="company-logos/reading-book.png" alt="Read Publication" className="w-8 h-8 object-contain mb-1" />
+                    <span className="text-sm">Read Publication</span>
                   </a>
-                  <a href="https://lnkd.in/d7JKNsn2" target="_blank" rel="noopener noreferrer">
-                    <img src="company-logos/crossref-logo-landscape-200.png" alt="CrossRef" className="w-8 h-8 object-contain hover:opacity-80" />
+
+                  {/* CrossRef */}
+                  <a
+                    href="https://lnkd.in/d7JKNsn2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center text-primary hover:opacity-80"
+                  >
+                    <img src="company-logos/crossref-logo-landscape-200.png" alt="CrossRef" className="w-8 h-8 object-contain mb-1" />
+                    <span className="text-sm">CrossRef</span>
                   </a>
                 </div>
               </div>
-
             </CardContent>
           </Card>
         </div>
