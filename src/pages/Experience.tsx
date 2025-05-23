@@ -299,6 +299,15 @@ const Experience = () => {
                   <li>Assisted in troubleshooting and debugging Python code, contributing to the overall improvement of the codebase.</li>
                   <li>Actively participated in team meetings, discussions, and brainstorming sessions, providing valuable insights and solutions.</li>
                 </ul>
+                {/* Internship Certificate Image */}
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold mb-3">Internship Certificate</h4>
+                  <img
+                    src="/certs/Internship Certificate_Sujit.png"
+                    alt="Certificate"
+                    className="w-full max-w-3xl mx-auto rounded-lg shadow-md border"
+                  />
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -318,10 +327,41 @@ const Experience = () => {
                   <img src="company-logos/IJARSCT Logo.png" alt="IJARSCT Logo" className="w-8 h-8 object-contain" />
                   <p className="text-gray-600" mt-1>
                     International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)
+                    <strong>ISSN (Online) 2581-9429</strong>
                   </p>
+                  <div className="mt-4 text-gray-700 text-sm leading-relaxed space-y-2">
+                    <p>
+                      <strong>Authors:</strong> Mr. Sujit Prakash Tadadikar<sup>1</sup>, Mr. Pankaj Sakpal<sup>2</sup>, Mrs. Sujata Shahabade<sup>3</sup>
+                    </p>
+
+                    <p>
+                      <strong>Affiliations:</strong><br />
+                      Embedded Software Engineer, Department of Science and Technology, IDOL, Mumbai, India<sup>1</sup><br />
+                      Assistant Manager, Department of Science and Technology, IDOL, Mumbai, India<sup>2</sup><br />
+                      Assistant Professor, Department of Computer Science, PCACS, Navi Mumbai, India<sup>3</sup>
+                    </p>
+
+                    <p>
+                      <strong>Emails:</strong><br />
+                      logic.codedebugrepeat@gmail.com<sup>1</sup>, pankaj.sakpal1819@gmail.com<sup>2</sup>, sujathashahabade@gmail.com<sup>3</sup>
+                    </p>
+
+                    <p>
+                      <strong>Abstract:</strong> This survey paper provides an overview of the advancements in early cancer detection
+                      through the application of prediction algorithms. Early detection of cancer plays a crucial role in improving patient
+                      outcomes and reducing mortality rates. With the rise of computational technologies and machine learning techniques,
+                      predictive algorithms have emerged as powerful tools for identifying potential cancer cases at an early stage.
+                      This survey explores various prediction algorithms, their applications, challenges, and future directions in the
+                      realm of early cancer detection.
+                    </p>
+
+                    <p>
+                      <strong>Keywords:</strong> Cancer detection, DNA, Machine learning, Prediction Algorithm
+                    </p>
+                  </div>
               </div>
                 </div>
-                <Badge>Jan 2024</Badge>
+                <Badge>Volume 4, Issue 2, January 2024</Badge>
               </div>
 
               <div className="mt-4 text-gray-700">
@@ -361,6 +401,15 @@ const Experience = () => {
                     <span className="text-base font-medium">CrossRef</span>
                   </a>
                 </div>
+              </div>
+              {/* Certificate Image */}
+              <div className="mt-8">
+                <h4 className="text-lg font-semibold mb-3">Certificate of Publication</h4>
+                <img
+                  src="/certs/203-1-1.png"
+                  alt="Certificate"
+                  className="w-full max-w-3xl mx-auto rounded-lg shadow-md border"
+                />
               </div>
 
             </CardContent>
