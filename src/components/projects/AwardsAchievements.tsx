@@ -1,3 +1,4 @@
+
 import React from "react";
 import AwardsAchievement from "./AwardsAchievement";
 
@@ -54,12 +55,20 @@ const AwardsAchievements = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8">Awards & Achievements</h2>
+        <h2 className="text-2xl font-bold mb-8 text-center animate-slide-up text-gradient pulse-slow">
+          Awards & Achievements
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {achievements.map((achievement, index) => (
-            <AwardsAchievement key={index} {...achievement} />
+            <div
+              key={index}
+              className={`animate-bounce-in hover-lift hover-glow`}
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <AwardsAchievement {...achievement} />
+            </div>
           ))}
         </div>
       </div>

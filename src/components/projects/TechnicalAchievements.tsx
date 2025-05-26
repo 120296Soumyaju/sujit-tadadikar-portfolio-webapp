@@ -27,16 +27,21 @@ const TechnicalAchievements = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8">Technical Achievements</h2>
+        <h2 className="text-2xl font-bold mb-8 text-center animate-fade-in text-gradient float">
+          Technical Achievements
+        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {achievements.map((achievement, index) => (
-            <TechnicalAchievement 
-              key={index} 
-              {...achievement}
-            />
+            <div
+              key={index}
+              className={`animate-scale-in hover-lift`}
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
+              <TechnicalAchievement {...achievement} />
+            </div>
           ))}
         </div>
       </div>
