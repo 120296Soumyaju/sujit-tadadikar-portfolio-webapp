@@ -55,7 +55,7 @@ const AwardsAchievements = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 overflow-hidden">
+    <section className="py-12 bg-gray-50 overflow-hidden relative">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-8 text-center animate-slide-up text-gradient pulse-slow">
           Awards & Achievements
@@ -64,14 +64,22 @@ const AwardsAchievements = () => {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className={`animate-bounce-in hover-lift hover-glow`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`animate-bounce-in hover-lift hover-glow animate-stagger-${Math.min(index + 1, 6)} group`}
+              style={{ 
+                animationDelay: `${index * 0.25}s`,
+                animationFillMode: 'both'
+              }}
             >
               <AwardsAchievement {...achievement} />
             </div>
           ))}
         </div>
       </div>
+      
+      {/* Decorative animated elements */}
+      <div className="absolute top-16 left-16 w-6 h-6 bg-yellow-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0s', animationDuration: '2s' }}></div>
+      <div className="absolute top-32 right-32 w-4 h-4 bg-blue-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.5s', animationDuration: '2.5s' }}></div>
+      <div className="absolute bottom-24 left-24 w-5 h-5 bg-green-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1s', animationDuration: '3s' }}></div>
     </section>
   );
 };

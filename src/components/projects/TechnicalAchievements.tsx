@@ -27,9 +27,9 @@ const TechnicalAchievements = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 overflow-hidden">
+    <section className="py-12 bg-gray-50 overflow-hidden relative">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8 text-center animate-fade-in text-gradient float">
+        <h2 className="text-2xl font-bold mb-8 text-center animate-slide-up text-gradient float">
           Technical Achievements
         </h2>
         
@@ -37,14 +37,21 @@ const TechnicalAchievements = () => {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className={`animate-scale-in hover-lift`}
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className={`animate-scale-in hover-lift hover-glow animate-stagger-${Math.min(index + 1, 6)} group`}
+              style={{ 
+                animationDelay: `${index * 0.2}s`,
+                animationFillMode: 'both'
+              }}
             >
               <TechnicalAchievement {...achievement} />
             </div>
           ))}
         </div>
       </div>
+      
+      {/* Animated background patterns */}
+      <div className="absolute top-20 right-10 w-32 h-32 border-2 border-primary/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 border-2 border-secondary/20 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
     </section>
   );
 };

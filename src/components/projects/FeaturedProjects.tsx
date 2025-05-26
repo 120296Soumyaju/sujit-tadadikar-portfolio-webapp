@@ -83,9 +83,9 @@ const FeaturedProjects = () => {
   ];
 
   return (
-    <section className="py-12 overflow-hidden">
+    <section className="py-12 overflow-hidden relative">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-8 text-center animate-fade-in text-gradient">
+        <h2 className="text-2xl font-bold mb-8 text-center animate-slide-up text-gradient float">
           Featured Projects
         </h2>
         
@@ -93,14 +93,22 @@ const FeaturedProjects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`animate-slide-up animate-stagger-${Math.min(index + 1, 6)}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`animate-scale-in hover-lift hover-glow animate-stagger-${Math.min(index + 1, 6)}`}
+              style={{ 
+                animationDelay: `${index * 0.3}s`,
+                animationFillMode: 'both'
+              }}
             >
               <FeaturedProject {...project} />
             </div>
           ))}
         </div>
       </div>
+      
+      {/* Floating background elements for visual interest */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-float" style={{ animationDelay: '0s' }}></div>
+      <div className="absolute top-32 right-20 w-16 h-16 bg-purple-200 rounded-full opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-20 left-32 w-12 h-12 bg-green-200 rounded-full opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 };
