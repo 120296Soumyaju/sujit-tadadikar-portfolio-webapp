@@ -60,6 +60,7 @@ const Experience = () => {
                           Built a mobile-first web application for college students to track and split expenses, with daily summaries and budgeting tips.<br />
                           <strong>Tech Stack:</strong> React.js, Django REST API, SQLite
                         </li>
+                        {/*
                         <li>
                           <a
                             href="https://github.com/120296Soumyaju/Quiz2"
@@ -75,6 +76,7 @@ const Experience = () => {
                           <strong>Tech Stack:</strong> Django DRF, PostgreSQL, Swagger
                         </li>
                         <li>
+                        */} 
                           <a
                             href="https://github.com/120296Soumyaju/SILK"
                             target="_blank"
