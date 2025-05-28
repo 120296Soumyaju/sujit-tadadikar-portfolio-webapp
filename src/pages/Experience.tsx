@@ -81,8 +81,8 @@ const Experience = () => {
                           <strong>Tech Stack:</strong> React.js, Django REST
                           API, SQLite
                         </li>
-
-                        <li>
+                        
+                        {/*<li>
                           <a
                             href="https://github.com/120296Soumyaju/Quiz2"
                             target="_blank"
@@ -101,7 +101,8 @@ const Experience = () => {
                           <br />
                           <strong>Tech Stack:</strong> Django DRF, PostgreSQL,
                           Swagger
-                        </li>
+                        </li>*/}
+                        
                         <li>
                           <a
                             href="https://github.com/120296Soumyaju/SILK"
