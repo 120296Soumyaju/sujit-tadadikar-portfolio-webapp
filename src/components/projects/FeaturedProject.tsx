@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,15 +32,15 @@ const FeaturedProject = ({
       {imageSrc ? (
         <div className="h-56 overflow-hidden">
           <AspectRatio ratio={16 / 9}>
-            <img 
-              src={imageSrc} 
-              alt={title} 
+            <img
+              src={imageSrc}
+              alt={title}
               className="w-full h-full object-cover"
             />
           </AspectRatio>
         </div>
       ) : (
-        <div 
+        <div
           className={`h-48 bg-gradient-to-r from-${gradientColors.from} to-${gradientColors.to} flex items-center justify-center`}
         >
           <h3 className="text-2xl font-bold text-white">{title}</h3>
@@ -50,15 +49,17 @@ const FeaturedProject = ({
       <CardContent className="pt-6">
         <div className="flex flex-wrap gap-2 mb-4">
           {badges.map((badge, index) => (
-            <Badge key={index} variant="outline">{badge}</Badge>
+            <Badge key={index} variant="outline">
+              {badge}
+            </Badge>
           ))}
         </div>
         <h4 className="text-xl font-bold mb-3">{title}</h4>
-        <p className="text-gray-600 mb-4">
-          {description}
-        </p>
+        <p className="text-gray-600 mb-4">{description}</p>
         <div className="space-y-2 text-gray-700 mb-4">
-          <p><strong>Key Features:</strong></p>
+          <p>
+            <strong>Key Features:</strong>
+          </p>
           <ul className="list-disc pl-5 space-y-1">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
@@ -67,7 +68,9 @@ const FeaturedProject = ({
         </div>
         <div className="flex flex-wrap gap-2 text-sm mt-6">
           {tags.map((tag, index) => (
-            <div key={index} className="bg-gray-100 px-3 py-1 rounded-full">{tag}</div>
+            <div key={index} className="bg-gray-100 px-3 py-1 rounded-full">
+              {tag}
+            </div>
           ))}
         </div>
       </CardContent>

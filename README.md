@@ -9,6 +9,7 @@ Live site: https://sujit-tadadikar.netlify.app/
 ## 🚀 Tech Stack
 
 ### Frontend
+
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
@@ -16,6 +17,7 @@ Live site: https://sujit-tadadikar.netlify.app/
 - [shadcn/ui](https://ui.shadcn.com/)
 
 ### Backend
+
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
 
@@ -51,3 +53,4 @@ npm start
 
 📄 License
 This project is licensed under the [MIT License](LICENSE).
+```

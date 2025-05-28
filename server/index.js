@@ -1,14 +1,12 @@
-
-import express from 'express';
-import nodemailer from 'nodemailer';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
+import express from "express";
+import nodemailer from "nodemailer";
+import cors from "cors";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: path.resolve(__dirname, './.env') }); // explicitly look for server/.env
+dotenv.config({ path: path.resolve(__dirname, "./.env") }); // explicitly look for server/.env
 const app = express();
 
 // Middleware
@@ -20,22 +18,22 @@ console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Missing");
 
 // Create transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
+    pass: process.env.EMAIL_PASS,
+  },
 });
 
 // Email sending endpoint
-app.post('/api/send-email', async (req, res) => {
+app.post("/api/send-email", async (req, res) => {
   const { name, email, subject, message } = req.body;
-  
+
   try {
     // Email options
     const mailOptions = {
       from: email,
-      to: 'sujit.tadadikar@gmail.com', // Your email address
+      to: "sujit.tadadikar@gmail.com", // Your email address
       subject: `Portfolio Contact: ${subject}`,
       html: `
         <h3>New message from your portfolio contact form</h3>
@@ -44,22 +42,22 @@ app.post('/api/send-email', async (req, res) => {
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
-      `
+      `,
     };
-    
+
     // Send email
     await transporter.sendMail(mailOptions);
-    
-    res.status(200).json({ success: true, message: 'Email sent successfully' });
+
+    res.status(200).json({ success: true, message: "Email sent successfully" });
   } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ success: false, message: 'Failed to send email' });
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, message: "Failed to send email" });
   }
 });
 
 const PORT = process.env.PORT || 5000;
-app.get('/', (req, res) => {
-  res.send('Server is running!');
+app.get("/", (req, res) => {
+  res.send("Server is running!");
 });
 
 app.listen(PORT, () => {

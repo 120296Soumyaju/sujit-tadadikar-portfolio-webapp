@@ -1,4 +1,3 @@
-
 import React from "react";
 import ProjectsHero from "@/components/projects/ProjectsHero";
 import FeaturedProjects from "@/components/projects/FeaturedProjects";

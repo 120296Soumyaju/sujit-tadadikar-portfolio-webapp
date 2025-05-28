@@ -1,4 +1,3 @@
-
 # Email Server for Portfolio Contact Form
 
 This is a simple Express server that handles sending emails from the portfolio contact form using Nodemailer.
@@ -14,6 +13,7 @@ PORT=5000
 ```
 
 2. For `EMAIL_PASS`, you need to create an App Password in your Google account:
+
    - Go to your Google Account > Security
    - Enable 2-Step Verification if not already enabled
    - Create an App Password (select "Mail" as the app and "Other" as the device)

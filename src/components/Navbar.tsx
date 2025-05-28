@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Instagram, Twitter, Menu, X } from "lucide-react";
@@ -25,7 +24,10 @@ const Navbar = () => {
           <Link to="/about" className="hover:text-primary transition-colors">
             About
           </Link>
-          <Link to="/experience" className="hover:text-primary transition-colors">
+          <Link
+            to="/experience"
+            className="hover:text-primary transition-colors"
+          >
             Experience
           </Link>
           <Link to="/projects" className="hover:text-primary transition-colors">

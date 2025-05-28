@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Instagram, Twitter, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -8,9 +7,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h2 className="text-2xl font-bold">Sujit Tadadikar</h2>
-            <p className="text-gray-400 mt-2">Embedded Software Engineer | API Integration | Cloud & IoT Solutions</p>
+            <p className="text-gray-400 mt-2">
+              Embedded Software Engineer | API Integration | Cloud & IoT
+              Solutions
+            </p>
           </div>
-          
+
           <div className="flex items-center space-x-6">
             <a
               href="https://github.com/120296Soumyaju"
@@ -57,9 +59,12 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Sujit Tadadikar. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Sujit Tadadikar. All rights
+            reserved.
+          </p>
           <p className="mt-2">
             <a
               href="https://madewithloveinindia.org"
@@ -67,7 +72,11 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-pink-500 hover:underline"
             >
-              Made with <span role="img" aria-label="Love" className="text-rose-500">&hearts;</span> in India
+              Made with{" "}
+              <span role="img" aria-label="Love" className="text-rose-500">
+                &hearts;
+              </span>{" "}
+              in India
             </a>
           </p>
         </div>

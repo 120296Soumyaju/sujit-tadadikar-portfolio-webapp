@@ -1,4 +1,3 @@
-
 import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -24,7 +23,7 @@ const PageLoading = () => (
     <Skeleton className="h-12 w-3/4 mx-auto" />
     <Skeleton className="h-8 w-1/2 mx-auto" />
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-      {[1, 2, 3].map(i => (
+      {[1, 2, 3].map((i) => (
         <Skeleton key={i} className="h-40 w-full rounded-xl" />
       ))}
     </div>
@@ -51,37 +50,55 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={
-                <Suspense fallback={<PageLoading />}>
-                  <Home />
-                </Suspense>
-              } />
-              <Route path="about" element={
-                <Suspense fallback={<PageLoading />}>
-                  <About />
-                </Suspense>
-              } />
-              <Route path="experience" element={
-                <Suspense fallback={<PageLoading />}>
-                  <Experience />
-                </Suspense>
-              } />
-              <Route path="projects" element={
-                <Suspense fallback={<PageLoading />}>
-                  <Projects />
-                </Suspense>
-              } />
-              <Route path="contact" element={
-                <Suspense fallback={<PageLoading />}>
-                  <Contact />
-                </Suspense>
-              } />
+              <Route
+                index
+                element={
+                  <Suspense fallback={<PageLoading />}>
+                    <Home />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="about"
+                element={
+                  <Suspense fallback={<PageLoading />}>
+                    <About />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="experience"
+                element={
+                  <Suspense fallback={<PageLoading />}>
+                    <Experience />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="projects"
+                element={
+                  <Suspense fallback={<PageLoading />}>
+                    <Projects />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="contact"
+                element={
+                  <Suspense fallback={<PageLoading />}>
+                    <Contact />
+                  </Suspense>
+                }
+              />
             </Route>
-            <Route path="*" element={
-              <Suspense fallback={<PageLoading />}>
-                <NotFound />
-              </Suspense>
-            } />
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<PageLoading />}>
+                  <NotFound />
+                </Suspense>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
