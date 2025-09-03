@@ -123,7 +123,7 @@ const Experience = () => {
                         </li>
                         <li>
                           <a
-                            href="https://github.com/120296Soumyaju/job-portal-Webapp"
+                            href="https://job-portal-webapp-iota.vercel.app"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 hover:underline font-semibold"
@@ -489,7 +489,7 @@ const Experience = () => {
               <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-300"></div>
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">
-                  Feb 2019 - Feb 2020
+                  Feb 2018 - Feb 2020
                 </Badge>
                 <h3 className="text-xl font-bold">
                   Software Consultant | Full Stack Software Engineer
