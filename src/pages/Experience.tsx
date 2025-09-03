@@ -25,16 +25,17 @@ const Experience = () => {
               <div className="mb-2">
                 <Badge className="mb-2">Nov 2023 - Present</Badge>
                 <h3 className="text-xl font-bold">
-                  Full Stack Software Engineer
+                  Company Owner & Lead Software Engineer
                 </h3>
                 <div className="flex items-center gap-3 mt-1">
                   <img
-                    src="company-logos/technologynext_logo.png"
-                    alt="TN Logo"
+                    src="company-logos/SCS.png"
+                    alt="SCS Logo"
                     className="w-8 h-8 object-contain"
                   />
                   <p className="text-gray-600">
-                    Technology Next ,India
+                    Soumya's Computer Solution's, Navi Mumbai, Maharashtra,
+                    India
                   </p>
                 </div>
               </div>
@@ -44,16 +45,6 @@ const Experience = () => {
                   <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
                     <li>
-                      <strong>Developed Client Relationships:</strong>{" "}
-                       Built and maintained strong client relationships through excellent service delivery, tailored solutions, and effective communication.
-                    </li>
-                    <li>
-                      <strong>
-                        Innovated Services: 
-                      </strong>{" "}
-                      Introduced new technologies and processes to enhance service offerings and operational efficiency, driving business growth and staying competitive in the market.
-                    </li>
-                    {/*<li>
                       <strong>Business Strategy & Operations:</strong>{" "}
                       Identified a market gap in IT solutions for small
                       businesses and academic institutions. Secured AMC with M/s
@@ -67,7 +58,7 @@ const Experience = () => {
                       Founded Soumya's Computer Solutions to provide end-to-end
                       software services. Delivered custom backend systems,
                       dashboards, and applications across industries.
-                    </li>*/}
+                    </li>
                     <li>
                       <strong>Highlighted Projects:</strong>
                       <ul className="list-disc pl-5 space-y-4 mt-2 text-gray-700">
@@ -91,7 +82,7 @@ const Experience = () => {
                           API, SQLite
                         </li>
                         
-                        <li>
+                        {/*<li>
                           <a
                             href="https://github.com/120296Soumyaju/Quiz2"
                             target="_blank"
@@ -110,7 +101,7 @@ const Experience = () => {
                           <br />
                           <strong>Tech Stack:</strong> Django DRF, PostgreSQL,
                           Swagger
-                        </li>
+                        </li>*/}
                         
                         <li>
                           <a
@@ -499,7 +490,7 @@ const Experience = () => {
               <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-300"></div>
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">
-                  Feb 2018 - Feb 2020
+                  Feb 2019 - Feb 2020
                 </Badge>
                 <h3 className="text-xl font-bold">
                   Software Consultant | Full Stack Software Engineer
