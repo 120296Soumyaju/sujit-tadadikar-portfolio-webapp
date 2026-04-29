@@ -28,22 +28,24 @@ const FeaturedProject = ({
   imageSrc,
 }: FeaturedProjectProps) => {
   return (
-    <Card className="overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group border-gray-100 flex flex-col h-full bg-white relative">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
       {imageSrc ? (
-        <div className="h-56 overflow-hidden">
+        <div className="h-56 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <AspectRatio ratio={16 / 9}>
             <img
               src={imageSrc}
               alt={title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </AspectRatio>
         </div>
       ) : (
         <div
-          className={`h-48 bg-gradient-to-r from-${gradientColors.from} to-${gradientColors.to} flex items-center justify-center`}
+          className={`h-48 bg-gradient-to-br from-${gradientColors.from} to-${gradientColors.to} flex items-center justify-center transition-transform duration-700 group-hover:scale-105`}
         >
-          <h3 className="text-2xl font-bold text-white">{title}</h3>
+          <h3 className="text-2xl font-bold text-white relative z-10">{title}</h3>
         </div>
       )}
       <CardContent className="pt-6">

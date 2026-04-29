@@ -8,8 +8,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <h2 className="text-2xl font-bold">Sujit Tadadikar</h2>
             <p className="text-gray-400 mt-2">
-              Embedded Software Engineer | API Integration | Cloud & IoT
-              Solutions
+              Full Stack Developer | Embedded Software Engineer | Cloud & IoT Architect
             </p>
           </div>
 
@@ -82,13 +81,13 @@ const Footer = () => {
         </div>
         <div className="text-center mt-2">
           <a
-            href="https://visitorbadge.io/status?path=https%3A%2F%2Fsujit-tadadikar.netlify.app%2F"
+            href="https://github.com/120296Soumyaju"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block"
           >
             <img
-              src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fsujit-tadadikar.netlify.app%2F&label=VISITORS%20TODAY&labelColor=%23d9e3f0&countColor=%23dce775&style=plastic&labelStyle=lower"
+              src="https://komarev.com/ghpvc/?username=sujit-tadadikar-portfolio&label=VISITORS&color=0e75b6&style=plastic"
               alt="Visitor badge"
             />
           </a>

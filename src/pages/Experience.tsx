@@ -1,27 +1,272 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { motion, Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const Experience = () => {
   return (
-    <div className="pt-20 pb-16">
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold">Professional Experience</h1>
-          <p className="text-gray-600 mt-4 max-w-3xl">
-            My professional journey in software development, API integration,
-            and IoT solutions.
-          </p>
+    <div className="pt-24 pb-16 min-h-screen bg-slate-50">
+      <section className="py-16 md:py-24 bg-white relative border-b border-gray-100 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="max-w-3xl"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+              Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Experience</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              My professional journey in software development, API integration,
+              and IoT solutions. Building scalable systems and leading technical teams.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8">Work Timeline</h2>
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUp}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold flex items-center gap-3">
+              <span className="w-8 h-1 bg-primary rounded-full inline-block"></span>
+              Work Timeline
+            </h2>
+          </motion.div>
 
-          <div className="space-y-12">
+          <div className="space-y-16 relative before:absolute before:inset-0 before:ml-[11px] before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary/50 before:via-gray-200 before:to-transparent">
             {/* Entrepreneurial Experience */}
-            <div className="border-l-4 border-primary pl-6 relative">
-              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary"></div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-primary shadow-sm z-10 group-hover:scale-125 transition-transform duration-300"></div>
+              
+              <div className="mb-2">
+                <Badge className="mb-2">Aug 2025 - Present</Badge>
+                <h3 className="text-xl font-bold">
+                  Head of Technology & Engineering - Full Stack Engineer
+                </h3>
+                <div className="flex items-center gap-3 mt-1">
+                  <img
+                    src="company-logos/rubit.png"
+                    alt="rubitcube Logo"
+                    className="w-8 h-8 object-contain"
+                  />
+                  <p className="text-gray-600">
+                    RubitCube Information Technologies LLC. Dubai,UAE
+                  </p>
+                </div>
+              </div>
+
+              <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="pt-6">
+                  <h4 className="font-semibold mb-2">SUMMARY OF ROLE</h4>
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                    <p>
+                     
+                      Lead end-to-end engineering for client and internal products across the UAE market. Responsible for full-stack development, DevOps, server & hosting management, product architecture, cloud deployment, SEO optimization, R&D, and technical leadership. Collaborate cross-functionally with business, operations, SEO, and design teams to deliver high-impact solutions.
+                    </p>
+                    <li>
+                      <strong>
+                        Situation
+                      </strong>{" "}
+                      RubitCube needed a unified engineering lead to build and deploy multiple high-impact digital products while managing technical operations, servers, and client expectations.
+                    </li>
+                    <li>
+                      <strong>
+                        Task
+                      </strong>{" "}
+                      Design, develop, deploy, optimize, and maintain client & in-house applications, ensure 99% uptime, improve SEO, secure servers, and guide new technical hires.
+                    </li>
+                    <li>
+                      <strong>
+                        Action
+                      </strong>{" "}
+                      <ul>
+                        <li>Architected, developed, and deployed 7+ end-to-end applications (React, Laravel, Django DRF, Next.js, PHP, MySQL).</li>
+                        <li>Performs full server/hosting management across VPS, cPanel, WHMCS, Cloudflare CDN, and email systems.</li>
+                        <li>Implemented Linux security hardening—SSH RSA keys, firewall rules, fail2ban, auditd, AIDE, CIS benchmark controls.</li>
+                        <li>Migrated legacy systems to AlmaLinux 8 VPS with optimized Apache + NGINX load balancing layers.</li>
+                        <li>Conducted performance tuning—DB indexing, caching, rate limiting, API optimization, MPM worker tuning.</li>
+                        <li>Implemented CI/CD-style version control workflows using GitHub/Bitbucket with multi-domain Git integration.</li>
+                        <li>Spearheaded R&D initiatives and delivered POCs for emerging in-house products aligned with business KPIs.</li>
+                        <li>Provided SEO technical improvements—site speed, schema, structured data, on-page optimization.</li>
+                        <li>Conducted interviewing, onboarding, mentoring and task management for technical interns.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>
+                        Results
+                      </strong>{" "}
+                      <ul>
+                        <li>Delivered 100% of client projects on time, reducing development cycle by 35%.</li>
+                        <li>Improved server uptime to 99.9% through proactive monitoring & hardening.</li>
+                        <li>Reduced website load times by 40–60%, directly improving SEO scores.</li>
+                        <li>Increased Google ranking for clients (BlueCatalyst, ShamsNaturals) by up to 90%.</li>
+                        <li>Reduced bot attacks & unauthorized access attempts by 95% using hardened SSH + Fail2Ban.</li>
+                        <li>Automated backup & monitoring processes, decreasing manual workload by 70%.</li>
+                        <li>Successfully mentored interns, increasing team productivity by 30%.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Highlighted Projects:</strong>
+                      <ul className="list-disc pl-5 space-y-4 mt-2 text-gray-700">
+                        <li>
+                          <a
+                            href="https://benoit.ae"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                           Benoit Contracting LLC – Modern Construction Web App
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> Benoit Contracting LLC
+                          <br />
+                          Delivered a responsive, SEO-optimized landing site with dynamic project portfolios, modal-based details, and high-performance UX.
+                          <br />
+                          <strong>Tech Stack:</strong> React.js, Typescript, vite, Tailwind CSS, php backend 
+                        </li>
+
+                        <li>
+                          <a
+                            href="https://rubitcube.com/bigbrandlogo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            Big Brand Logos – Branding Agency SPA
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> Rubitcube Information Technologies LLC.
+                          <br />
+                          Built full website with pricing plans, live portfolio, and optimized load performance for UAE audience.
+                          <br />
+                          <strong>Tech Stack:</strong> React.js, React Router SPA, Typescript, vite, Tailwind CSS, php email backend
+                        </li>
+                        <li>
+                          <a
+                            href="https://nachoflixuae.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            NachoflixUAE – End-to-End Server Migration & Optimization
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> NachoflixUAE
+                          <br />
+                          <ul>
+                            <li>AlmaLinux 8 VPS + Apache+NGINX + MySQL + Security Hardening</li>
+<li>Migrated legacy JSP/PHP site to optimized VPS.</li>
+<li>Enabled RSA SSH login, Fail2Ban, Netdata monitoring.</li>
+<li>Reduced downtime, fixed SMTP mail delivery with custom cron automation.</li>
+<li>Implemented Apache MPM worker tuning & NGINX load balancing.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a
+                            href="https://www.bluecatalystcs.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            Blue Catalyst – Technical SEO optimization & Performance Audit
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> Blue Catalyst
+                          <br />
+                          Improved on-page SEO resulting in ~90% improvement in ranking and resolved core technical bugs.
+                        </li>
+                        <li>
+                            <strong>Ephemeral QR Attendance System – R&D to Production</strong>
+                          <br />
+                          <strong>Delivered to:</strong> RubitCube Information Technologies LLC.
+                          <br />
+                          Developed a secure, multi-timezone QR-based attendance system with geofencing, OT tracking, and real-time QR rotation.
+                          <br />
+                          <strong>Tech Stack:</strong> React TS + Django DRF + Redis + Celery + MySQL + Cloudflare R2 + Docker + JWT auth + NGINX + WebSockets 
+                        </li>
+                        <li>
+                          <a
+                            href="https://ecobags.rubitcubedev.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >
+                            ShamsNaturals UAE – Multi-Domain Migration & Redesign
+                          </a>
+                          <br />
+                          <strong>Delivered to:</strong> ShamsNaturals UAE
+                          <br />
+                          <ul>
+                            <li>Migrated multiple CMS systems to optimized cPanel architecture.</li>
+                            <li>Implemented Git-based version tracking & CodeGuard backups</li>
+                            <li>Optimized Apache MPM worker tuning & NGINX load balancing</li>
+                            <li>Ensured 24/7 uptime for the e-commerce platform</li>
+                            <li>Managed daily server maintenance and security updates</li>
+                            <li>Implemented automated daily backups and security monitoring</li>
+                            <li>Configured SSH key authentication and restricted root access</li>
+                            <li>Hardened Apache + PHP installations against common vulnerabilities</li>
+                            <li>Installed and tuned Netdata for real-time server monitoring and anomaly detection</li>
+                            <li>Implemented Fail2Ban with custom rules for WordPress protection</li>
+                            <li>Configured Apache MPM worker tuning & NGINX load balancing</li>
+                            <li>Optimized MySQL queries and database configurations for faster response times</li>
+                            <li>Resolved critical payment integration issues & API failures</li>
+                            <li>Enabled 2FA login for all admin accounts</li>
+                            <li>Built complete new e-commerce platform + CMS using React TS + Laravel 11 with full SEO module, banners, dealers, pages, events, blog, and multi-image system to overcome outdated functionalities and outdated plain php based website . Outdated Plain php based Website: <a
+                            href="https://shamsnaturals.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-semibold"
+                          >https://shamsnaturals.com</a></li>
+                            <li>Secured MySQL databases with proper user permissions and encryption</li>
+                            <li>Implemented firewall rules to block suspicious traffic and potential attacks</li>
+                            <li>Configured domain email routing & restored lost messages</li>
+                            <li>Enabled remote access for developers.</li>
+                            <li>Migrated legacy CMS to modern architecture.</li>
+                            <li>Resolved critical payment integration issues & API failures.</li>
+                            <li>Built multi-domain e-commerce platform (UAE focus) with real-time shipping integration and localized payment gateways.</li>
+                            <li>Implemented AI-powered recommendation engine, boosting repeat purchases by 18%.</li>
+                            <li>Optimized site for local search, achieving #1 ranking for target produce keywords.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-primary shadow-sm z-10 group-hover:scale-125 transition-transform duration-300"></div>
+              
               <div className="mb-2">
                 <Badge className="mb-2">Nov 2023 - Present</Badge>
                 <h3 className="text-xl font-bold">
@@ -40,7 +285,8 @@ const Experience = () => {
                 </div>
               </div>
 
-              <Card className="mt-4">
+              <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="pt-6">
                   <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -180,11 +426,18 @@ const Experience = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
 
             {/* LEXI DEVICES Experience */}
-            <div className="border-l-4 border-gray-300 pl-6 relative">
-              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-300"></div>
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-gray-300 shadow-sm z-10 group-hover:border-primary group-hover:scale-125 transition-all duration-300"></div>
+              
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">
                   Oct 2022 - Oct 2023
@@ -204,7 +457,8 @@ const Experience = () => {
                 </div>
               </div>
 
-              <Card className="mt-4">
+              <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="pt-6">
                   <h4 className="font-semibold mb-2">
                     Project: Lexi's Universal IoT Gateway
@@ -283,11 +537,18 @@ const Experience = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
 
             {/* CMA CGM Experience */}
-            <div className="border-l-4 border-gray-300 pl-6 relative">
-              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-300"></div>
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-gray-300 shadow-sm z-10 group-hover:border-primary group-hover:scale-125 transition-all duration-300"></div>
+              
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">
                   May 2022 - Sep 2022
@@ -308,7 +569,8 @@ const Experience = () => {
                 </div>
               </div>
 
-              <Card className="mt-4">
+              <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="pt-6">
                   <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -337,11 +599,18 @@ const Experience = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
 
             {/* SEAHORSE Experience */}
-            <div className="border-l-4 border-gray-300 pl-6 relative">
-              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-300"></div>
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-gray-300 shadow-sm z-10 group-hover:border-primary group-hover:scale-125 transition-all duration-300"></div>
+              
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">
                   Mar 2021 - Mar 2022
@@ -361,7 +630,8 @@ const Experience = () => {
                 </div>
               </div>
 
-              <Card className="mt-4">
+              <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="pt-6">
                   <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -390,11 +660,18 @@ const Experience = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
 
             {/* SPERENTES SOLUTIONS Experience */}
-            <div className="border-l-4 border-gray-300 pl-6 relative">
-              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-300"></div>
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-gray-300 shadow-sm z-10 group-hover:border-primary group-hover:scale-125 transition-all duration-300"></div>
+              
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">
                   Mar 2020 - Feb 2021
@@ -414,7 +691,8 @@ const Experience = () => {
                 </div>
               </div>
 
-              <Card className="mt-4">
+              <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="pt-6">
                   <h4 className="font-semibold mb-2">
                     Project: Enterprise SaaS ERP Software
@@ -482,11 +760,18 @@ const Experience = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
 
             {/* Software Consultant Experience */}
-            <div className="border-l-4 border-gray-300 pl-6 relative">
-              <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-gray-300"></div>
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-gray-300 shadow-sm z-10 group-hover:border-primary group-hover:scale-125 transition-all duration-300"></div>
+              
               <div className="mb-2">
                 <Badge variant="secondary" className="mb-2">
                   Feb 2018 - Feb 2020
@@ -504,7 +789,8 @@ const Experience = () => {
                 </div>
               </div>
 
-              <Card className="mt-4">
+              <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardContent className="pt-6">
                   <h4 className="font-semibold mb-2">Key Responsibilities:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -644,7 +930,7 @@ const Experience = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -653,8 +939,15 @@ const Experience = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-8">Internship Experience</h2>
 
-          <div className="border-l-4 border-primary pl-6 relative">
-            <div className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-primary"></div>
+          <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+              className="pl-8 relative group"
+            >
+              <div className="absolute left-0 top-1 w-6 h-6 -translate-x-[11px] rounded-full bg-white border-4 border-primary shadow-sm z-10 group-hover:scale-125 transition-transform duration-300"></div>
+            
             <div className="mb-2">
               <Badge className="mb-2">Aug 2023</Badge>
               <h3 className="text-xl font-bold">Python Programmer</h3>
@@ -670,7 +963,8 @@ const Experience = () => {
               </div>
             </div>
 
-            <Card className="mt-4">
+            <Card className="mt-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardContent className="pt-6">
                 <p className="mb-4 text-gray-700">
                   During my winter internship at Contetra, I worked as a Python
@@ -728,7 +1022,7 @@ const Experience = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+            </motion.div>
         </div>
       </section>
 
@@ -865,7 +1159,7 @@ const Experience = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+            </div>
       </section>
     </div>
   );

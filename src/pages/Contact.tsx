@@ -25,6 +25,22 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { motion, Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
 
 // Form validation schema
 const formSchema = z.object({
@@ -92,26 +108,38 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-20 pb-16">
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold">Contact Me</h1>
-          <p className="text-gray-600 mt-4 max-w-3xl">
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision.
-          </p>
+    <div className="pt-24 pb-16 min-h-screen bg-slate-50">
+      <section className="py-16 md:py-24 bg-white relative border-b border-gray-100 overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="max-w-3xl"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Me</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your vision.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Info */}
             <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+              <motion.div variants={fadeUp}><h2 className="text-2xl font-bold mb-6">Get in Touch</h2></motion.div>
 
               <div className="space-y-6">
-                <Card>
+                <motion.div variants={fadeUp}><Card className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
                   <CardContent className="p-6 flex items-start">
                     <div className="p-3 bg-primary/10 rounded-full mr-4">
                       <Mail className="h-6 w-6 text-primary" />
@@ -126,9 +154,9 @@ const Contact = () => {
                       </a>
                     </div>
                   </CardContent>
-                </Card>
+                </Card></motion.div>
 
-                <Card>
+                <motion.div variants={fadeUp}><Card className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
                   <CardContent className="p-6 flex items-start">
                     <div className="p-3 bg-primary/10 rounded-full mr-4">
                       <Phone className="h-6 w-6 text-primary" />
@@ -138,9 +166,9 @@ const Contact = () => {
                       <p className="text-gray-600">+91 9372367026</p>
                     </div>
                   </CardContent>
-                </Card>
+                </Card></motion.div>
 
-                <Card>
+                <motion.div variants={fadeUp}><Card className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
                   <CardContent className="p-6 flex items-start">
                     <div className="p-3 bg-primary/10 rounded-full mr-4">
                       <MapPin className="h-6 w-6 text-primary" />
@@ -152,12 +180,12 @@ const Contact = () => {
                       </p>
                     </div>
                   </CardContent>
-                </Card>
+                </Card></motion.div>
               </div>
 
               {/* Social Links */}
               <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-4">Connect with Me</h3>
+                <motion.div variants={fadeUp}><h3 className="text-xl font-semibold mb-4">Connect with Me</h3>
                 <div className="flex space-x-4">
                   <a
                     href="https://github.com/120296Soumyaju"
@@ -196,12 +224,13 @@ const Contact = () => {
                     <Twitter className="h-6 w-6" />
                   </a>
                 </div>
+              </motion.div>
               </div>
             </div>
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card>
+              <motion.div variants={fadeUp}><Card className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
                 <CardContent className="p-6">
                   <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                   <Form {...form}>
@@ -277,6 +306,7 @@ const Contact = () => {
 
                       <Button
                         type="submit"
+                        size="lg"
                         disabled={isSubmitting}
                         className="w-full"
                       >
@@ -286,22 +316,28 @@ const Contact = () => {
                     </form>
                   </Form>
                 </CardContent>
-              </Card>
+              </Card></motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Map or additional info section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Let's Collaborate</h2>
+      <section className="py-16 bg-white border-t border-gray-100">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={fadeUp}
+          className="container mx-auto px-4 text-center"
+        >
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Let's Collaborate</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Whether you have a project in mind, want to collaborate, or just
             want to say hello, I'd love to hear from you. I aim to respond to
             all messages within 24-48 hours.
           </p>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
