@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Github, Linkedin, Instagram, Twitter, Menu, X } from "lucide-react";
+import { Github, Linkedin, Instagram, Twitter, Menu, X, Accessibility } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { AccessibilityRibbon } from "./AccessibilityRibbon";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isA11yOpen, setIsA11yOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -33,11 +35,21 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        scrolled ? "py-2" : "py-4"
-      }`}
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out"
     >
-      <div className={`mx-auto max-w-5xl px-4 transition-all duration-300 ${
+      <AccessibilityRibbon isOpen={isA11yOpen} onClose={() => setIsA11yOpen(false)} />
+      
+      {!isA11yOpen && (
+        <button 
+          onClick={() => setIsA11yOpen(true)}
+          className="absolute top-0 right-4 sm:right-8 bg-slate-900 text-white p-1.5 px-3 rounded-b-lg shadow-md hover:bg-slate-800 transition-colors z-50 flex items-center gap-2 text-xs font-medium"
+          aria-label="Open Accessibility Tools"
+        >
+          <Accessibility size={14} /> <span className="hidden sm:inline">Accessibility</span>
+        </button>
+      )}
+
+      <div className={`mx-auto max-w-5xl px-4 transition-all duration-300 ${scrolled ? "pt-2 pb-2" : "pt-4 pb-4"} ${
         scrolled ? "w-[95%] md:w-[80%]" : "w-full"
       }`}>
         <div className={`flex justify-between items-center transition-all duration-300 ${

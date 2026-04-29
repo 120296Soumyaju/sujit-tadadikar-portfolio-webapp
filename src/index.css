@@ -131,3 +131,24 @@
     }
   }
 }
+
+/* Accessibility Features */
+html.a11y-large-text {
+  font-size: 110% !important;
+}
+
+.a11y-dyslexia-font, .a11y-dyslexia-font * {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+}
+
+.a11y-highlight-links a, .a11y-highlight-links button {
+  outline: 3px solid #ffeb3b !important;
+  outline-offset: 2px !important;
+  text-decoration: underline !important;
+}
+
+.a11y-high-contrast {
+  filter: contrast(150%) saturate(200%) !important;
+  background-color: #000 !important;
+  color: #fff !important;
+}
