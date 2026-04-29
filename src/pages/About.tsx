@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { motion, Variants } from "framer-motion";
+import { useGamification } from '@/context/GamificationContext';
+import { useEffect } from 'react';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -21,6 +23,11 @@ const staggerContainer: Variants = {
 };
 
 const About = () => {
+  const { addXP } = useGamification();
+
+  useEffect(() => {
+    addXP(10, 'visit_about', 'Discovered the About page!');
+  }, [addXP]);
   return (
     <div className="pt-24 pb-16 bg-slate-50 min-h-screen">
       {/* About Header */}

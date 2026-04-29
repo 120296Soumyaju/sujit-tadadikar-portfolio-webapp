@@ -3,8 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { Github, Linkedin, Instagram, Twitter, Menu, X, Accessibility } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AccessibilityRibbon } from "./AccessibilityRibbon";
+import { useGamification } from '@/context/GamificationContext';
 
 const Navbar = () => {
+  const { addXP, unlockAchievement } = useGamification();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isA11yOpen, setIsA11yOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +43,7 @@ const Navbar = () => {
       
       {!isA11yOpen && (
         <button 
-          onClick={() => setIsA11yOpen(true)}
+          onClick={() => { setIsA11yOpen(true); addXP(15, "open_a11y", "Accessibility matters!"); unlockAchievement("a11y_champ"); }}
           className="absolute top-0 right-4 sm:right-8 bg-slate-900 text-white p-1.5 px-3 rounded-b-lg shadow-md hover:bg-slate-800 transition-colors z-50 flex items-center gap-2 text-xs font-medium"
           aria-label="Open Accessibility Tools"
         >
@@ -98,6 +100,7 @@ const Navbar = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => { addXP(25, "click_social", "Networking!"); unlockAchievement("networker"); }}
                 className="text-gray-500 hover:text-primary transition-colors p-2 rounded-full hover:bg-gray-100"
               >
                 <social.icon size={18} />

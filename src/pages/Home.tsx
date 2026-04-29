@@ -14,6 +14,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { motion, Variants } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { useGamification } from '@/context/GamificationContext';
+import { useEffect } from 'react';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -31,6 +33,11 @@ const staggerContainer: Variants = {
 };
 
 const Home = () => {
+  const { addXP } = useGamification();
+
+  useEffect(() => {
+    addXP(10, 'visit_home', 'Discovered the Home page!');
+  }, [addXP]);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -77,7 +84,7 @@ const Home = () => {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full hover:bg-gray-50 hover:-translate-y-0.5 transition-all" asChild>
-                  <Link to="/projects">View My Work</Link>
+                  <Link to="/projects" onClick={() => addXP(20, "click_view_work", "Checking out the projects!")}>View My Work</Link>
                 </Button>
               </motion.div>
             </motion.div>

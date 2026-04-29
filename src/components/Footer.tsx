@@ -1,8 +1,10 @@
 import { Github, Linkedin, Instagram, Twitter, Mail } from "lucide-react";
+import { useGamification } from '@/context/GamificationContext';
 
 const Footer = () => {
+  const { addXP, unlockAchievement } = useGamification();
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12 relative">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -93,6 +95,13 @@ const Footer = () => {
           </a>
         </div>
       </div>
+
+      {/* Hidden Easter Egg */}
+      <div 
+        onClick={() => { addXP(50, 'easter_egg_footer', 'You found the secret easter egg!'); unlockAchievement('keen_eye'); }}
+        className="absolute bottom-4 right-4 w-3 h-3 rounded-full bg-gray-800 hover:bg-primary cursor-pointer transition-colors duration-300 animate-pulse opacity-50 hover:opacity-100"
+        title="?"
+      />
     </footer>
   );
 };

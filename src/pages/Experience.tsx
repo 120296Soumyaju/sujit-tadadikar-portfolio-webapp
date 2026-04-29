@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion, Variants } from "framer-motion";
+import { useGamification } from '@/context/GamificationContext';
+import { useEffect } from 'react';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -8,6 +10,11 @@ const fadeUp: Variants = {
 };
 
 const Experience = () => {
+  const { addXP } = useGamification();
+
+  useEffect(() => {
+    addXP(10, 'visit_experience', 'Discovered the Experience page!');
+  }, [addXP]);
   return (
     <div className="pt-24 pb-16 min-h-screen bg-slate-50">
       <section className="py-16 md:py-24 bg-white relative border-b border-gray-100 overflow-hidden">

@@ -26,6 +26,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion, Variants } from "framer-motion";
+import { useGamification } from '@/context/GamificationContext';
+import { useEffect } from 'react';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -55,6 +57,8 @@ const formSchema = z.object({
 });
 
 const Contact = () => {
+  const { addXP } = useGamification();
+  useEffect(() => { addXP(10, 'visit_contact', 'Discovered the Contact page!'); }, [addXP]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Initialize form with validation schema
@@ -70,6 +74,7 @@ const Contact = () => {
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
+    addXP(100, 'contact_form_submit', 'Sent a message! Massive XP boost!');
 
     try {
       const response = await fetch(
